@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talos — Autonomous AI Swarm Dashboard</title>
+    <meta name="description" content="Talos AI: Sistem orkestrasi agen otonom untuk keamanan dan produktivitas.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <main class="container">
+        <header>
+            <div class="logo">
+                <span class="glitch" data-text="TALOS">TALOS</span>
+            </div>
+            <div class="status-badge">
+                <span class="dot"></span>
+                SYSTEM ONLINE
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>Autonomous <span class="gradient-text">AI Swarm</span> Intelligence</h1>
+            <p>Talos adalah evolusi dari SI BABU. Sistem agen cerdas yang dirancang untuk riset keamanan, otomatisasi tingkat lanjut, dan pengembangan kode mandiri.</p>
+            
+            <div class="cta-group">
+                <button id="downloadBtn" class="btn btn-primary">
+                    <span class="icon">⬇️</span> Download Talos Client
+                </button>
+                <a href="https://github.com/SoonOver/Talos" target="_blank" class="btn btn-secondary">
+                    Repository Talos
+                </a>
+            </div>
+            <p class="instruction-text">Setelah download, jalankan <code>start.exe</code> (atau <code>bash start.sh</code>) untuk mengaktifkan agen.</p>
+        </section>
+
+        <section class="terminal-container">
+            <div class="terminal-header">
+                <div class="controls">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="title">talos_core --live</div>
+            </div>
+            <div id="terminal" class="terminal-body">
+                <div class="line"><span class="prompt">talos@system:~$</span> booting kernel...</div>
+                <div class="line"><span class="prompt">talos@system:~$</span> mounting memory/swarm_data... [OK]</div>
+                <div class="line"><span class="prompt">talos@system:~$</span> initializing decider agent... [OK]</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>Swarm Logic</h3>
+                <p>Pembagian tugas cerdas ke berbagai agen spesialis secara paralel.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📡</div>
+                <h3>Multi-Channel</h3>
+                <p>Akses kontrol penuh melalui Terminal, Telegram, dan WhatsApp.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Self-Healing</h3>
+                <p>Kemampuan untuk mendeteksi error dan memperbaiki kodenya sendiri.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Talos Project. Advanced Agentic Coding.</p>
+    </footer>
+
+    <!-- Hidden Download Link -->
+    <a id="autoDownload" href="talos_client.zip" download="talos_client.zip" style="display: none;"></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

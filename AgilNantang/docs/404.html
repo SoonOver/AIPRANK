@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Talos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: #06060b; color: #eeeef5; font-family: 'Outfit', sans-serif;
+            display: flex; align-items: center; justify-content: center;
+            min-height: 100vh; text-align: center;
+        }
+        .wrap { max-width: 500px; padding: 2rem; }
+        h1 { font-size: 8rem; font-weight: 800; letter-spacing: -4px; line-height: 1;
+            background: linear-gradient(135deg, #ff0055, #00e5ff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        p { color: #8888a0; font-size: 1.15rem; margin: 1rem 0 2rem; }
+        a {
+            display: inline-block; padding: .9rem 2rem; border-radius: 12px;
+            background: #ff0055; color: #fff; font-weight: 700;
+            text-decoration: none; box-shadow: 0 8px 25px rgba(255,0,85,0.3);
+            transition: transform .3s;
+        }
+        a:hover { transform: translateY(-3px); }
+        code { font-family: 'JetBrains Mono', monospace; color: #00e5ff; font-size: .9rem; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>404</h1>
+        <p>Halaman tidak ditemukan.<br><code>talos@core: target not found</code></p>
+        <a href="./">Kembali ke Dashboard</a>
+    </div>
+</body>
+</html>

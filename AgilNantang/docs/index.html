@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talos — Autonomous AI Swarm Intelligence</title>
+    <meta name="description" content="Talos: Sistem orkestrasi agen AI otonom multi-role untuk riset keamanan, otomatisasi, dan pengembangan kode mandiri.">
+    <meta name="keywords" content="Talos, AI, Agent, Swarm, Autonomous, Cybersecurity, Automation">
+    <meta name="author" content="Talos Project">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Talos — Autonomous AI Swarm Intelligence">
+    <meta property="og:description" content="Sistem orkestrasi agen AI otonom multi-role untuk riset keamanan dan otomatisasi tingkat lanjut.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Background Canvas -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="#" class="nav-logo">TALOS</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#agents">Agents</a></li>
+            <li><a href="#terminal">Live Demo</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#start">Get Started</a></li>
+        </ul>
+        <a href="#start" class="nav-cta">Download</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+    <div class="container hero-inner">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            SYSTEM ONLINE — v2.0
+        </div>
+        <h1>Autonomous <span class="gradient-text">AI Swarm</span><br>Intelligence</h1>
+        <p class="hero-desc">Talos adalah evolusi dari SI BABU. Sistem orkestrasi agen cerdas multi-role yang dirancang untuk riset keamanan, otomatisasi tingkat lanjut, dan pengembangan kode secara mandiri.</p>
+        <div class="hero-actions">
+            <a href="#start" class="btn btn-primary" id="downloadHeroBtn">
+                <span>⬇️</span> Download Client
+            </a>
+            <a href="https://github.com/SoonOver/AIPRANK" target="_blank" class="btn btn-outline">
+                <span>📂</span> GitHub Repository
+            </a>
+        </div>
+        <p class="hero-instruction">Jalankan <code>node main.js</code> atau <code>start.exe</code> untuk mengaktifkan agen.</p>
+    </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<div class="container">
+    <div class="stats-bar reveal">
+        <div class="stat-item">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-label">Agent Roles</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-count="5">0</div>
+            <div class="stat-label">Pipelines</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-count="6">0</div>
+            <div class="stat-label">Built-in Tools</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">Gateway Channels</div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-label">💡 Tentang Talos</span>
+            <h2 class="section-title">Bukan Chatbot Biasa.<br><span class="gradient-text">Sebuah Swarm.</span></h2>
+            <p class="section-desc">Talos menggunakan arsitektur multi-agent yang mengorkestrasi berbagai agen spesialis untuk menyelesaikan tugas kompleks secara paralel dan otonom.</p>
+        </div>
+        <div class="about-grid">
+            <div class="reveal">
+                <div class="about-visual">
+                    <div class="arch-node"><span class="icon">🧠</span><div><div class="label">Orchestrator</div><div class="sub">Central command — routing & state management</div></div></div>
+                    <div class="arch-node"><span class="icon">⚡</span><div><div class="label">Decider Agent</div><div class="sub">AI-powered intent classification</div></div></div>
+                    <div class="arch-node"><span class="icon">🔄</span><div><div class="label">Pipeline Engine</div><div class="sub">Multi-step role execution chains</div></div></div>
+                    <div class="arch-node"><span class="icon">💾</span><div><div class="label">Memory Engine</div><div class="sub">Short-term, long-term, skill storage</div></div></div>
+                    <div class="arch-node"><span class="icon">🛡️</span><div><div class="label">Validator + Checker</div><div class="sub">Self-healing feedback loop</div></div></div>
+                    <div class="arch-node"><span class="icon">📡</span><div><div class="label">Multi-Gateway</div><div class="sub">Terminal, Telegram, WhatsApp</div></div></div>
+                </div>
+            </div>
+            <div class="reveal">
+                <h3 style="font-size:1.6rem;font-weight:700;margin-bottom:1rem;">Bagaimana Talos Bekerja?</h3>
+                <p style="color:var(--text-dim);margin-bottom:1.5rem;">Setiap pesan masuk diproses melalui <strong style="color:var(--text)">dual-pass intent system</strong>: classifier regex cepat diikuti oleh decider AI dengan confidence scoring.</p>
+                <p style="color:var(--text-dim);margin-bottom:1.5rem;">Berdasarkan intent, orchestrator memilih pipeline yang tepat dan menjalankan rantai role agents (researcher → planner → architect → builder → checker → verifier).</p>
+                <p style="color:var(--text-dim);margin-bottom:1.5rem;">Setiap step divalidasi. Jika gagal, sistem melakukan <strong style="color:var(--text)">auto-retry hingga 2x</strong> sebelum fallback. Semua output disimpan ke memory engine untuk pembelajaran kontekstual.</p>
+                <p style="color:var(--text-dim);">Hasilnya? <strong style="color:var(--green)">Agen yang semakin pintar setiap kali digunakan.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ AGENT ROLES ═══ -->
+<section class="section" id="agents">
+    <div class="container">
+        <div class="reveal" style="text-align:center;">
+            <span class="section-label">🤖 Agent Roles</span>
+            <h2 class="section-title">10 Agen Spesialis,<br><span class="gradient-text">Satu Kesatuan Swarm</span></h2>
+            <p class="section-desc" style="margin:0 auto;">Setiap agen memiliki keahlian unik dan bekerja bersama melalui pipeline yang terkoordinasi.</p>
+        </div>
+        <div class="roles-grid">
+            <div class="role-card reveal">
+                <div class="role-icon">⚡</div>
+                <h3>Decider</h3>
+                <p>AI classifier yang menentukan intent dan confidence level dari setiap pesan masuk dengan dual-pass system.</p>
+                <span class="role-tag">Core</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">🔍</div>
+                <h3>Researcher</h3>
+                <p>Melakukan riset mendalam via web search dan GitHub untuk mengumpulkan informasi teknis sebelum eksekusi.</p>
+                <span class="role-tag">Intel</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">📋</div>
+                <h3>Planner</h3>
+                <p>Merancang rencana eksekusi terstruktur berdasarkan hasil riset dan requirement yang telah dikumpulkan.</p>
+                <span class="role-tag">Strategy</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">🏗️</div>
+                <h3>Architect</h3>
+                <p>Mendesain arsitektur teknis, struktur file, dan dependency graph sebelum fase pembangunan dimulai.</p>
+                <span class="role-tag">Design</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">🔨</div>
+                <h3>Builder</h3>
+                <p>Menulis kode, membuat file, dan mengeksekusi perintah sistem. Agen yang mengubah rencana menjadi kenyataan.</p>
+                <span class="role-tag">Execution</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">🔎</div>
+                <h3>Checker</h3>
+                <p>Menganalisis output builder untuk menemukan bug, kerentanan, dan inkonsistensi kode sebelum dikirim.</p>
+                <span class="role-tag">QA</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">✅</div>
+                <h3>Verifier</h3>
+                <p>Validasi akhir yang memastikan output memenuhi requirement awal dan standar kualitas proyek.</p>
+                <span class="role-tag">Validation</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">📄</div>
+                <h3>Requirement</h3>
+                <p>Mengekstrak dan memformulasi kebutuhan teknis dari input user menjadi spesifikasi yang dapat dieksekusi.</p>
+                <span class="role-tag">Analysis</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">💬</div>
+                <h3>Chatter</h3>
+                <p>Agen percakapan natural dengan kemampuan web browsing dan konteks memory untuk dialog yang relevan.</p>
+                <span class="role-tag">Dialog</span>
+            </div>
+            <div class="role-card reveal">
+                <div class="role-icon">📝</div>
+                <h3>Summarizer</h3>
+                <p>Merangkum output panjang dan kompleks menjadi ringkasan yang padat dan mudah dipahami.</p>
+                <span class="role-tag">Synthesis</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TERMINAL DEMO ═══ -->
+<section class="section" id="terminal">
+    <div class="container">
+        <div class="reveal" style="text-align:center;">
+            <span class="section-label">🖥️ Live Demo</span>
+            <h2 class="section-title">Lihat Talos <span class="gradient-text">Beraksi</span></h2>
+            <p class="section-desc" style="margin:0 auto;">Simulasi real-time dari proses orkestrasi agen Talos.</p>
+        </div>
+        <div class="terminal-wrapper reveal">
+            <div class="terminal-bar">
+                <div class="terminal-dots"><span></span><span></span><span></span></div>
+                <div class="terminal-title">talos_core --orchestrate --verbose</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <!-- Lines injected by JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TOOLS ═══ -->
+<section class="section" id="tools">
+    <div class="container">
+        <div class="reveal" style="text-align:center;">
+            <span class="section-label">🛠️ Built-in Tools</span>
+            <h2 class="section-title">Persenjataan <span class="gradient-text">Lengkap</span></h2>
+            <p class="section-desc" style="margin:0 auto;">Tools terintegrasi yang siap digunakan oleh setiap agen dalam swarm.</p>
+        </div>
+        <div class="tools-flex reveal">
+            <div class="tool-chip"><span class="chip-icon">⚙️</span> Command Executor</div>
+            <div class="tool-chip"><span class="chip-icon">🌐</span> Web Fetcher</div>
+            <div class="tool-chip"><span class="chip-icon">📁</span> File Manager</div>
+            <div class="tool-chip"><span class="chip-icon">🗂️</span> Filesystem Walker</div>
+            <div class="tool-chip"><span class="chip-icon">🔍</span> GitHub Search</div>
+            <div class="tool-chip"><span class="chip-icon">🕸️</span> Web Search</div>
+            <div class="tool-chip"><span class="chip-icon">💾</span> Memory Engine</div>
+            <div class="tool-chip"><span class="chip-icon">📊</span> Classifier</div>
+            <div class="tool-chip"><span class="chip-icon">🔐</span> Rate Limiter</div>
+            <div class="tool-chip"><span class="chip-icon">🔗</span> Continuation Handler</div>
+            <div class="tool-chip"><span class="chip-icon">✅</span> Validator</div>
+            <div class="tool-chip"><span class="chip-icon">📡</span> Telegram Gateway</div>
+            <div class="tool-chip"><span class="chip-icon">💬</span> WhatsApp Gateway</div>
+        </div>
+
+        <div class="reveal" style="margin-top:4rem;">
+            <h3 style="text-align:center;font-size:1.4rem;font-weight:700;margin-bottom:1.5rem;">Pipeline Flows</h3>
+            <div class="tools-flex">
+                <div class="tool-chip" style="border-color:var(--primary);"><span class="chip-icon">🔨</span> Build Pipeline</div>
+                <div class="tool-chip" style="border-color:var(--secondary);"><span class="chip-icon">🔬</span> Research Pipeline</div>
+                <div class="tool-chip" style="border-color:var(--accent);"><span class="chip-icon">💬</span> Chat Pipeline</div>
+                <div class="tool-chip" style="border-color:var(--green);"><span class="chip-icon">🔧</span> Fix Pipeline</div>
+                <div class="tool-chip" style="border-color:#ffbd2e;"><span class="chip-icon">⚡</span> Automation Pipeline</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ GETTING STARTED ═══ -->
+<section class="section" id="start">
+    <div class="container">
+        <div class="reveal" style="text-align:center;">
+            <span class="section-label">🚀 Getting Started</span>
+            <h2 class="section-title">Mulai dalam <span class="gradient-text">3 Langkah</span></h2>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card reveal">
+                <div class="step-num">1</div>
+                <h3>Clone Repository</h3>
+                <p>Download atau clone proyek Talos dari GitHub.</p>
+                <code>git clone https://github.com/SoonOver/AIPRANK.git</code>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-num">2</div>
+                <h3>Setup Environment</h3>
+                <p>Copy file .env.example, isi API key Gemini, dan install dependencies.</p>
+                <code>npm install && cp .env.example .env</code>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-num">3</div>
+                <h3>Jalankan Talos</h3>
+                <p>Aktifkan agen dan mulai berinteraksi melalui terminal.</p>
+                <code>npm start</code>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner reveal">
+            <h2>Siap Menggunakan <span class="gradient-text">Talos</span>?</h2>
+            <p>Download sekarang dan rasakan kekuatan AI Swarm Intelligence.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="https://github.com/SoonOver/AIPRANK/archive/refs/heads/main.zip" class="btn btn-primary" id="downloadBtn">
+                    <span>⬇️</span> Download ZIP
+                </a>
+                <a href="https://github.com/SoonOver/AIPRANK" target="_blank" class="btn btn-outline">
+                    <span>⭐</span> Star on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="https://github.com/SoonOver/AIPRANK" target="_blank">GitHub</a>
+            <a href="#about">About</a>
+            <a href="#agents">Agents</a>
+            <a href="#tools">Tools</a>
+        </div>
+        <p>&copy; 2026 Talos Project. Advanced Agentic Coding.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
